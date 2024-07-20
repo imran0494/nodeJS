@@ -59,7 +59,9 @@
 const express = require("express");
 const app = express();
 const db = require("./db.js");
+require("dotenv").config();
 
+const PORT = process.env.PORT || 3000;
 
 const bodyParser = require("body-parser");
 
@@ -72,8 +74,6 @@ app.get("/", function (req, res) {
 app.get("/chicken", function (req, res) {
   res.send("give me butter chicken");
 });
-
-
 
 const menuRoutes = require("./routes/menuRoutes");
 app.use("/menuItem", menuRoutes);
