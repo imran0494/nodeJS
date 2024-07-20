@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const person = require("./../models/person");
+const person = require("../models/Person");
 
 //commet added for testing purposes
 
